@@ -17,6 +17,7 @@ jobs:
         with:
           node-version: '20.12.0'
           cache: 'pnpm'
+          cache-dependency-path: gui/package-lock.json
       - run: pnpm install
       - run: pnpm run build
       - uses: peaceiris/actions-gh-pages@v3
