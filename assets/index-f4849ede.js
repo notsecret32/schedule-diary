@@ -1,0 +1,1 @@
+import{S as i,i as o,s as r,e as l,a as c,n as a,d as u}from"./index-a648b503.js";function d(s){let e;return{c(){e=l("div"),e.innerHTML="<h1>Hello, Vite + Svelte + Tauri</h1>"},m(t,n){c(t,e,n)},p:a,i:a,o:a,d(t){t&&u(e)}}}class m extends i{constructor(e){super(),o(this,e,null,d,r,{})}}export{m as default};
