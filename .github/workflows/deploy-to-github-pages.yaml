@@ -6,47 +6,28 @@ on:
       - main
 
 jobs:
-  install:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
           version: 9.0.5
-      - name: Verify pnpm installation
-        run: pnpm --version
-      - name: Cache pnpm
-        uses: actions/cache@v4
-        with:
-          key: pnpm-${{ steps.pnpm.outputs.version }}
-          path: ~/.pnpm
+
       - name: Setup NodeJs
         uses: actions/setup-node@v4
         with:
           node-version: '20.12.0'
           cache-dependency-path: 'gui/pnpm-lock.yaml'
+
       - name: Installing packages
         run: pnpm install
-        env:
-          PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
-          PATH: $PNPM_HOME:${PATH}
 
-  build:
-    needs: install
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
       - name: Building GUI
         run: pnpm run build
-        env:
-          PATH: ${{ needs.install.outputs.pnpm-bin }}:$PATH
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
       - name: Publish GUI to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
