@@ -27,5 +27,3 @@ dist-ssr
 # Etc
 .routify
 build
-pnpm-lock.yaml
-package-lock.json
