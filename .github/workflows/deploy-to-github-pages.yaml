@@ -22,18 +22,17 @@ jobs:
           node-version: '20.12.0'
           cache-dependency-path: 'gui/pnpm-lock.yaml'
 
-      - name: Change directory to gui
-        run: cd gui
-
       - name: Installing packages
+        working-directory: ./gui
         run: pnpm install
 
       - name: Building GUI
+        working-directory: ./gui
         run: pnpm run build
 
       - name: Publish GUI to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: ./gui/dist
           force_orphan: true
