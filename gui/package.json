@@ -1,21 +1,38 @@
 {
   "name": "schedule-diary",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "routify -c dev:vite",
+    "dev:routify": "routify",
+    "dev:vite": "vite",
+    "build": "svelte-check && routify -b && vite build",
     "preview": "vite preview",
-    "check": "svelte-check --tsconfig ./tsconfig.json"
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "tauri": "tauri"
+  },
+  "dependencies": {
+    "@svelteuidev/composables": "^0.11.1",
+    "@svelteuidev/core": "^0.11.1",
+    "@svelteuidev/motion": "^0.11.1",
+    "@tauri-apps/api": "^1.3.0",
+    "radix-icons-svelte": "^1.2.1",
+    "worker-timers": "^7.0.64"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^3.0.2",
-    "@tsconfig/svelte": "^5.0.2",
-    "svelte": "^4.2.12",
-    "svelte-check": "^3.6.7",
-    "tslib": "^2.6.2",
-    "typescript": "^5.2.2",
-    "vite": "^5.2.0"
+    "@roxi/routify": "^2.18.11",
+    "@sveltejs/vite-plugin-svelte": "^2.0.0",
+    "@tauri-apps/cli": "^1.3.1",
+    "@tsconfig/svelte": "^3.0.0",
+    "@types/node": "^18.7.10",
+    "sass": "^1.62.0",
+    "svelte": "^3.54.0",
+    "svelte-check": "^3.0.0",
+    "svelte-preprocess": "^5.0.0",
+    "tslib": "^2.4.1",
+    "typescript": "^4.9.5",
+    "vite": "^4.2.1",
+    "vite-tsconfig-paths": "^4.2.0"
   }
 }
