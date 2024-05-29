@@ -1,0 +1,18 @@
+[package]
+name = "schedule-diary"
+description = "Telegram bot using a Mini App to view the schedule of classes at the BNTU University."
+version = "0.0.1"
+authors = ["Alexander Skvorchevskiy"]
+license = "CC-BY-NC-ND 4.0"
+repository = "https://github.com/notsecret32/schedule-diary"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+teloxide = { version = "0.12", features = ["macros"] }
+log = "0.4"
+pretty_env_logger = "0.4"
+tokio = { version =  "1.8", features = ["rt-multi-thread", "macros"] }
+dotenv = "0.15.0"
+url = "2.2.2"
