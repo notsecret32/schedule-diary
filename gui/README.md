@@ -19,6 +19,10 @@ inside the Svelte code the library `@tauri-apps/api` is used to interact with th
 
 The web application will be used as a Telegram Mini App to view the schedule.
 
+**So, how do I get a link to a web application?**
+
+Answer: It's simple, there is a GitHub Action that automatically creates GitHub Pages and updates its contents.
+
 ## How to run?
 
 There is nothing complicated here, you need to go to this directory (`gui`) and execute the following commands:

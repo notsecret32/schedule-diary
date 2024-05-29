@@ -1,0 +1,23 @@
+name: Deploy to GitHub Pages
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20.12.0
+          cache: 'pnpm'
+      - run: pnpm install
+      - run: pnpm run build
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_dir: ./out
+          cname: schedule-diary.com
+          force_orphan: true
