@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  install:
+    install:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -27,7 +27,7 @@ jobs:
       - name: Installing packages
         run: pnpm install
         env:
-          PATH: ${{ steps.pnpm.outputs.bin }}:$PATH
+          PATH: ${{ steps.pnpm.outputs.bin }}:${PATH}
 
   build:
     needs: install
