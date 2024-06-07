@@ -1,0 +1,9 @@
+[package]
+name = "schedule-diary-bot"
+version = "0.1.0"
+edition = "2021"
+license = "CC-BY-NC-ND"
+authors = ['Alexander Skvorchevskiy']
+repository = "https://github.com/notsecret32/schedule-diary.git"
+
+[dependencies]
