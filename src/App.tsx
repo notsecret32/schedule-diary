@@ -1,9 +1,5 @@
+import { SchedulePage } from './pages/SchedulePage';
+
 export const App = () => {
-  return (
-    <main>
-      <div>
-        <h1>Schedule Diary UI</h1>
-      </div>
-    </main>
-  );
+  return <SchedulePage />;
 };
