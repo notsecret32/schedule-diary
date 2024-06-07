@@ -17,11 +17,11 @@ export const ScheduleList = () => {
   };
 
   return (
-    <div>
+    <main>
       {cards !== null
         ? cards.map((card, i) => <LessonCard key={i} {...card} />)
         : 'List is empty'}
       <button onClick={(e) => onGetScheduleClick(e)}>Get Schedule</button>
-    </div>
+    </main>
   );
 };
