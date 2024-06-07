@@ -1,0 +1,15 @@
+[package]
+name = "schedule-diary-bot"
+version = "0.1.0"
+edition = "2021"
+license = "CC-BY-NC-ND"
+authors = ['Alexander Skvorchevskiy']
+repository = "https://github.com/notsecret32/schedule-diary.git"
+
+[dependencies]
+teloxide = { version = "0.12", features = ["macros"] }
+log = "0.4"
+pretty_env_logger = "0.4"
+tokio = { version =  "1.8", features = ["rt-multi-thread", "macros"] }
+dotenv = "0.15.0"
+url = "2.2.2"
