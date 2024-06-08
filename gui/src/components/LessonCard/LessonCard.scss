@@ -1,5 +1,9 @@
 .lesson-card {
-  width: 100%;
-  height: auto;
-  padding: 10px;
+  margin: 5px 0;
+  padding: 16px;
+  background-color: red;
+
+  h1 {
+    text-align: center;
+  }
 }

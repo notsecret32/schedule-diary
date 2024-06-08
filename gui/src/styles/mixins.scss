@@ -1,0 +1,9 @@
+@import './variables.scss';
+
+@mixin font($size: 14, $weight: 500, $style: normal) {
+  font-family: $--web-font-family;
+  font-size: $size;
+  font-weight: $weight;
+  font-style: $style;
+  font-optical-sizing: auto;
+}

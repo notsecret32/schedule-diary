@@ -1,0 +1,30 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+main,
+body,
+header,
+main,
+footer,
+section {
+  display: block;
+  margin: 0;
+  padding: 0;
+  background-color: $--web-bg-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+  color: $--web-text-color;
+}
+
+h1 {
+  @include font(24, 700);
+}

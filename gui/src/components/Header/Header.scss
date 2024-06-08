@@ -1,8 +1,10 @@
-header {
-  display: flex;
-  justify-content: space-between;
+@import '../../styles/variables.scss';
 
-  > div {
-    margin: auto 0;
+.navbar {
+  background-color: $--web-bg-color;
+
+  h1 {
+    text-align: center;
+    padding: 6px 0;
   }
 }
