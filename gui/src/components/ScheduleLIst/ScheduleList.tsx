@@ -9,11 +9,15 @@ import { LessonCard } from '../LessonCard/LessonCard';
  * соответствующего расписания.
  */
 export const ScheduleList = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
   const [cards, setCards] = useState<ILessonCard[]>([]);
 
   useEffect(() => {
+    if (isLoaded) return;
+
     setCards(generateLessons(10));
-  }, [cards]);
+    setIsLoaded(true);
+  }, [cards, isLoaded]);
 
   return (
     <main>
