@@ -2,9 +2,9 @@ import { Header, ScheduleList } from '../components';
 
 export const SchedulePage = () => {
   return (
-    <main>
+    <div style={{ margin: '0 16px' }}>
       <Header />
       <ScheduleList />
-    </main>
+    </div>
   );
 };

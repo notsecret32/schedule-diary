@@ -1,10 +1,10 @@
-.header {
-  width: 100%;
-  height: 54px;
-  display: flex;
-  background-color: green;
+@import '../../styles/variables.scss';
 
-  .filter-button {
-    float: right;
+.navbar {
+  background-color: $--web-bg-color;
+
+  h1 {
+    text-align: center;
+    padding: 6px 0;
   }
 }
